@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Vans() {
   const [vans, setVans] = useState<any[]>([]);
@@ -24,6 +24,7 @@ export default function Vans() {
   ));
   return (
     <div className="van-list-container">
+      <h1>Explore our van options</h1>
       <div className="van-list">{vanElements}</div>
     </div>
   );
