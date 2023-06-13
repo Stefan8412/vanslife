@@ -9,6 +9,7 @@ import VanDetail from "./pages/VanDetail";
 import Layout from "./components/Layout";
 import Income from "./Host/Income";
 import Reviews from "./Host/Reviews";
+import HostLayout from "./components/HostLayout";
 
 function App() {
   return (
@@ -19,9 +20,11 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Vans />} />
           <Route path="/vans/:id" element={<VanDetail />} />
-          <Route path="/host" element={<Dashboard />} />
-          <Route path="/host/income" element={<Income />} />
-          <Route path="/host/reviews" element={<Reviews />} />
+          <Route path="/host" element={<HostLayout />}>
+            <Route path="/host" element={<Dashboard />} />
+            <Route path="/host/income" element={<Income />} />
+            <Route path="/host/reviews" element={<Reviews />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
