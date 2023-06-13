@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 export default function VanDetail() {
   const params = useParams();
+  console.log(params);
   const [van, setVan] = useState<any>(null);
   useEffect(() => {
     fetch(`/api/vans/${params.id}`)
