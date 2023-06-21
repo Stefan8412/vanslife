@@ -10,6 +10,8 @@ import Layout from "./components/Layout";
 import Income from "./Host/Income";
 import Reviews from "./Host/Reviews";
 import HostLayout from "./components/HostLayout";
+import HostVans from "./Host/HostVans";
+import HostVansDetail from "./Host/HostVansDetail";
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
             <Route path="reviews" element={<Reviews />} />
+            <Route path="vans" element={<HostVans />} />
+            <Route path="vans/:id" element={<HostVansDetail />} />
           </Route>
         </Route>
       </Routes>
